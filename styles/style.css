@@ -7,6 +7,9 @@
 body {
   font-family: "Work Sans", sans-serif;
 }
+.hide {
+  display: none;
+}
 img {
   width: 100%;
 }
@@ -23,6 +26,19 @@ img {
   font-size: 1.25rem;
   font-weight: 600;
   border: 0;
+}
+.section-title {
+  color: #727272;
+  font-size: 45px;
+  font-weight: 500;
+  padding-bottom: 24px;
+}
+.section-description {
+  color: #727272;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  padding-bottom: 30px;
 }
 /* Header Related Style */
 header {
@@ -56,9 +72,8 @@ nav ul li a:hover {
 }
 /* Header Banner Related Style */
 .banner-container {
-  max-width: 1920px;
   padding: 0 33.125rem;
-  margin: 7.18rem 0;
+  margin: 5.18rem 0;
   text-align: center;
 }
 .banner-title {
@@ -76,9 +91,32 @@ nav ul li a:hover {
 .banner-image {
   border-radius: 8px;
 }
+/* Features Section Related Style */
+.feature-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 76px;
+  margin-top: 85px;
+}
+.feature-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.features-description {
+  text-align: justify;
+}
+.features-content {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
 /* Responsive for Small Device related Style */
 @media screen and (max-width: 576px) {
-  .nav-container {
+  .nav-container,
+  .feature-container {
     flex-direction: column;
     row-gap: 1rem;
   }
@@ -86,7 +124,8 @@ nav ul li a:hover {
   .nav-container,
   .banner-container,
   .banner-description,
-  .banner-title {
+  .banner-title,
+  .features-content {
     padding: 10px;
     margin: 0;
   }
@@ -94,13 +133,21 @@ nav ul li a:hover {
   .banner-description {
     text-align: justify;
   }
-  .banner-title {
+  .banner-title,
+  .section-title {
     font-size: 10vw;
+  }
+  .feature-images {
+    grid-template-columns: 1fr;
+  }
+  .features-description {
+    width: 90%;
   }
 }
 /* Responsive for Medium Device related Style */
 @media screen and (min-width: 577px) and (max-width: 992px) {
-  .nav-container {
+  .nav-container,
+  .feature-container {
     flex-direction: column;
     row-gap: 1rem;
   }
@@ -108,8 +155,21 @@ nav ul li a:hover {
   .nav-container,
   .banner-container,
   .banner-description,
-  .banner-title {
+  .banner-title,
+  .features-content {
     padding: 20px;
     margin: 0;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1600px) {
+  .banner-container,
+  .banner-description,
+  .banner-title,
+  .features-content {
+    padding: 20px 10rem;
+    margin: 0;
+  }
+  .features-content {
+    padding: 0;
   }
 }
