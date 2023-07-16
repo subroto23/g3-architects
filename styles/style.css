@@ -4,12 +4,112 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-    
+body {
+  font-family: "Work Sans", sans-serif;
+}
+img {
+  width: 100%;
+}
+.container {
+  padding: 0 15rem;
+  margin-top: 3.125rem;
+}
+.btn-primary {
+  background: #ff900e;
+  border-radius: 8px;
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: 0;
+}
+/* Header Related Style */
+header {
+  background: rgba(255, 144, 14, 0.1);
+  padding-bottom: 3rem;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.125rem 14.375rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+nav ul li {
+  list-style: none; /* 144.444% */
+}
+nav ul li a {
+  color: #424242;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+/* Header Banner Related Style */
+.banner-container {
+  max-width: 1920px;
+  padding: 0 33.125rem;
+  margin: 7.18rem 0;
+  text-align: center;
+}
+.banner-title {
+  color: #131313;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.banner-description {
+  color: #727272;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  padding: 3rem 0;
+}
+.banner-image {
+  border-radius: 8px;
 }
 /* Responsive for Small Device related Style */
 @media screen and (max-width: 576px) {
+  .nav-container {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .container,
+  .nav-container,
+  .banner-container,
+  .banner-description,
+  .banner-title {
+    padding: 10px;
+    margin: 0;
+  }
+  .banner-title,
+  .banner-description {
+    text-align: justify;
+  }
+  .banner-title {
+    font-size: 10vw;
+  }
 }
 /* Responsive for Medium Device related Style */
 @media screen and (min-width: 577px) and (max-width: 992px) {
+  .nav-container {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .container,
+  .nav-container,
+  .banner-container,
+  .banner-description,
+  .banner-title {
+    padding: 20px;
+    margin: 0;
+  }
 }
